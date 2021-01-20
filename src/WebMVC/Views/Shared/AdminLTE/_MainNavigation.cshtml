@@ -43,14 +43,30 @@
                 </li>
                 @if (User.Identity.IsAuthenticated)
                 {
-    <li class="nav-item ">
-        <a asp-controller="Home" asp-action="Privacy" class="nav-link @Url.MakeActiveClass("home","privacy")">
-            <i class="nav-icon fas fa-lock"></i>
-            <p>
-                Privacy
-            </p>
-        </a>
-    </li>}
+            <li class="nav-item ">
+                <a asp-controller="Home" asp-action="Privacy" class="nav-link @Url.MakeActiveClass("home","privacy")">
+                    <i class="nav-icon fas fa-lock"></i>
+                    <p>
+                        Privacy
+                    </p>
+                </a>
+            </li>}
+                <li class="nav-item ">
+                    <a asp-controller="RoleManager" asp-action="Index" class="nav-link @Url.MakeActiveClass("rolemanager","index")">
+                        <i class="nav-icon fas fa-users"></i>
+                        <p>
+                            Role Manager
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a asp-controller="UserRoles" asp-action="Index" class="nav-link @Url.MakeActiveClass("userroles","index")">
+                        <i class="nav-icon fas fa-user-circle"></i>
+                        <p>
+                            User Manager
+                        </p>
+                    </a>
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
