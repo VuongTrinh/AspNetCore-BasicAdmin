@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using WebMVC.Models;
 
 namespace WebMVC.Data
 {
@@ -12,5 +10,9 @@ namespace WebMVC.Data
             : base(options)
         {
         }
+
+        public DbSet<Asset> Assets { get; set; }
+
+        public DbSet<FacilitySite> FacilitySites { get; set; }
     }
 }
